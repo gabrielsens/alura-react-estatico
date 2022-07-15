@@ -12,11 +12,11 @@ interface Props {
 }
 
 export default function Ordenador(
-    { ordenador, setOrdenador}: Props
-  ) {
-  const [aberto, setAberto] = useState<Boolean>(false);
+  { ordenador, setOrdenador}: Props
+) {
+  const [aberto, setAberto] = useState<boolean>(false);
   const nomeOrdenador = ordenador && opcoes.find(
-      opcao => opcao.value === ordenador)?.nome;
+    opcao => opcao.value === ordenador)?.nome;
   return (
     <button
       className={classNames({
@@ -47,5 +47,5 @@ export default function Ordenador(
         ))}
       </div>
     </button>
-  )
+  );
 }
